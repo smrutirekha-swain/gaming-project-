@@ -1,0 +1,76 @@
+<app-header></app-header>
+<app-usidebar></app-usidebar>
+<main id="main" class="main" style="margin-left: 12rem;">
+
+
+        <div class="loaderDiv" *ngIf="isloading">
+          <!-- <img src="../../../assets/img/kyc.png"> -->
+      
+          <span class="loader"></span>
+      </div>
+
+    <!-- <div class="sen">
+        <div>
+            <img height="320px" width="250px"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/b7/b3/eb/caption.jpg?w=1200&h=-1&s=1"
+                style="box-shadow: 0px 0px 55px 6px #ff5e00;">
+        </div>
+
+        <div>
+            <img height="320px" width="250px"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/b7/b3/eb/caption.jpg?w=1200&h=-1&s=1"
+                style="box-shadow: 0px 0px 55px 6px #ff5e00;;">
+        </div>
+
+        <div>
+            <img height="320px" width="250px"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/b7/b3/eb/caption.jpg?w=1200&h=-1&s=1"
+                style="box-shadow: 0px 0px 55px 6px #ff5e00;">
+        </div>
+
+    </div> -->
+<div class="userdash">
+<h1>GAMES</h1>
+</div>
+    <!-- <div class="row col-md-12" id="bar">
+        <div class="sub1">
+            <h5 style="padding-top: 252px;">NEWLY LAUNCHED GAME</h5>
+        </div>
+        <div class="col-md-4 ">
+            <img src="../../../assets/img/minecraft.png" alt="" style="width: -webkit-fill-available;">
+        </div>
+        <div class="col-md-4 ">
+            <img src="../../../assets/img/legends.png" alt="" style="width: -webkit-fill-available;">
+        </div>
+     <div class="col-md-3">
+               <img src="../../../assets/img/royal.png" alt="">
+            </div> -->
+    <!-- <div class="col-md-4">
+            <img src="../../../assets/img/amoungus.png" alt="" style="width: -webkit-fill-available;">
+        </div>
+    </div> -->
+    <div class="row" style="gap: 15px;justify-content: space-between;margin: 0 !important;flex-wrap: wrap;">
+        <div class="col-md-2" *ngFor="let data of viewdata let indexOfelement=index;">
+            <!-- <img height="120px" width="70px" src="{{url}}{{data?.imagepath}}/{{data?.gameimage}}"> -->
+  
+  
+  
+  
+  
+            <!-- <div>  <img height="120px" width="70px" src="{{url}}{{data?.imagepath}}/{{data?.gameimage}}">   <button type='button' class='btn btn-primary'  onclick='tournament(" +{{indexOfelement+1}} +")'>Tournament</button></div> -->
+          
+            <!-- <div (click)="tournament(data?.id,data?.tournament_status)"> -->
+
+            <div (click)="tournament(data?.id)">
+    <!-- <img height="120px" width="70px" style="cursor: pointer;"  src="{{url}}{{data?.imagepath}}/{{data?.gameimage}}"> -->
+    <img width="100%" style="cursor: pointer;"  src="{{url}}{{data?.img_path}}/{{data?.img}}">
+</div>
+
+        
+        
+        </div>
+    </div>
+
+
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,204 @@
+<app-header></app-header>
+<app-usidebar></app-usidebar>
+
+
+<main class="user">
+
+
+    <div class="loaderDiv" *ngIf="isloading">
+      <!-- <img src="../../../assets/img/kyc.png"> -->
+  
+      <span class="loader"></span>
+  </div>
+
+  <div class="pof">
+   
+  </div>
+
+  <div class="pof">
+
+    <div class="d-flex justify-content-center flex-column">
+
+      <h4>PROFILE</h4>
+      <div class="d-flex justify-content-center align-items-center flex-column" style="margin-bottom: 15px;gap: 10px;">
+      
+<!-- Button trigger modal -->
+<input type="file" class="form-control" [(ngModel)]="image" id="image" 
+accept="image/png, image/jpeg, image/jpg" (change)="imageUpload($event)">
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ UPLOAD
+</button> -->
+
+       
+     
+    
+
+    <!-- <img src="../../../assets/img/headlogo.png" alt="" style="border: 1px solid #fff;padding: 10px;"> -->
+<!--     
+    <img height="50px" width="50px"  src="{{url}}{{data?.imagepath}}/{{data?.profileimg}}" class="rounded-circle "> -->
+
+
+
+
+
+ <!-- <tbody *ngFor="let data of viewdata let indexOfelement=index;">
+  <tr>
+                
+    <div class="avatar-group">
+          <img height="50px" width="50px"  src="{{url}}{{data?.imagepath}}/{{data?.profileimg}}" class="rounded-circle ">
+        
+        </div>
+
+</tr> 
+</tbody> -->
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <label for="image">
+        <div class="profile-pic" style="background-image: url('../../../assets/img/smruti_mankidi.png')">
+            <span class="glyphicon glyphicon-camera"></span>
+            <span>Change Image</span>
+        </div>
+        </label>   
+
+
+      <div class="modal-body">
+        <input type="file" class="profile-pic;" [(ngModel)]="image" id="image" 
+        accept="image/png, image/jpeg, image/jpg" (change)="imageUpload($event)">
+      </div>
+      <div class="modal-footer">
+        
+         <!-- <button type="button" (click)="editprofile()" class="btn btn-primary">img</button> -->
+
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+
+ </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- form -->
+  <div class="col-md-12 d-flex justify-content-center" style="align-items: center;gap: 50px;flex-direction: column;">
+    <div class="d-flex justify-content-center">
+      <form>
+        <div class="row fix">
+          <div class="pof">
+            <h2 style="font-family: fantasy;">PROFILE UPDATE</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="adjust">
+              <div class="size">
+                <label for="name">NAME:</label><br>
+                <input type="text" [(ngModel)]="pid" id="pid" name="pid" class="col-form-label" hidden>
+                <input type="text" [(ngModel)]="name" id="name" name="name" class="col-form-label"
+                  placeholder="Enter Your Name">
+              </div>
+
+              <div class="size">
+                <label for="mail">EMAIL:</label><br>
+                <input type="email" [(ngModel)]="mail" id="mail" name="email" class="col-form-label"
+                  placeholder="Enter Your Email" readonly>
+              </div>
+
+              <div class="size">
+                <label for="mob">MOBILE:</label><br>
+                <input type="text" [(ngModel)]="mob" id="mob" name="mob" class="col-form-label"
+                  placeholder="Enter Your Number" readonly>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="pofi">
+            <button type="button" (click)="updateprofile()" class="btn btn-primary">SUBMIT</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- password change -->
+
+    <div>
+      <form>
+        <div class="fix">
+          <div class="pof">
+            <h2 style="font-family: fantasy;">Change Password</h2>
+          </div>
+          <div class="col-md-12">
+            <div class="adjust">
+
+
+              <div class="size">
+                <label for="pass">CURRENT PASSWORD:</label><br>
+                <input type="text" [(ngModel)]="pass" id="pass" name="pass" class="col-form-label"
+                  placeholder="Enter Current Password">
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+
+            <div class="size">
+              <input type="text" [(ngModel)]="pid" id="pid" name="pid" class="col-form-label" hidden>
+              <label for="npass">NEW PASSWORD:</label><br>
+              <input type="text" [(ngModel)]="npass" id="npass" name="npass" class="col-form-label"
+                placeholder="Enter New Password">
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <div class="size">
+              <label for="npass">Confirm PASSWORD:</label><br>
+              <input type="text" [(ngModel)]="Cpass" id="Cpass" name="Cpass" class="col-form-label"
+                placeholder="Enter New Password">
+            </div>
+
+          </div>
+
+          <div class="pofi">
+            <button type="button" (click)="updatepassword()" class="btn btn-primary">SUBMIT</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- (click)="updatedata(data)" -->
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

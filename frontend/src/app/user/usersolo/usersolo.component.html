@@ -1,0 +1,43 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+
+
+<main class="solo">
+  <button class="sdr"
+type="button" (click)="upcominpage()"> <i class='bx bx-left-arrow-alt'></i>
+</button>
+    <div class="one">
+       <h1>1</h1>
+    </div>
+  <div class="line">
+    <div class="Two">
+        <h1>2</h1>
+    </div>
+
+    <div class="Three">
+        <h1>3</h1>
+    </div>
+  </div>
+  <div class="datas">
+    <form>
+        <div class="butn form-group">
+          <label for="eamount">ENTER AMOUNT</label><br>
+          <input type="text" class="amount" [(ngModel)]="amount" id="amount" name="amount" >
+        </div>
+
+        <div class=" butn form-group">
+          <label for="team">TEAM</label><br>
+          <input type="text" class="amount" id="team" [(ngModel)]="team" id="team" name="team" >
+        </div>
+
+        <div class="butn">
+        <label for="team">PROCEED TO PAY</label><br>
+        <button type="submit" class=" amount btn btn-primary">PAY</button>
+    </div>
+      </form>
+  </div>
+    
+
+</main>
+<app-footer></app-footer>

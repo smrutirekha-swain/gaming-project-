@@ -1,0 +1,68 @@
+<app-header></app-header>
+<app-usidebar></app-usidebar>
+<main id="main" class="main" style="margin-left: 12rem;">
+
+
+
+    <div class="loaderDiv" *ngIf="isloading">
+      <!-- <img src="../../../assets/img/kyc.png"> -->
+  
+      <span class="loader"></span>
+  </div>
+
+  <button class="sdr"
+  type="button" (click)="live()"> <i class='bx bx-left-arrow-alt'></i>
+ </button>
+
+<div class="userdash">
+  <h1>LIVE TOURNAMENT</h1>
+  </div>
+  <div class="month">
+    <h3>MARCH 2024</h3>
+  </div>
+  <div class="tabledata">
+    <table class="table set">
+        <thead class="tours">
+            <th scope="col">TOURNAMENT</th>
+            <th scope="col">PRIZE</th>  
+            <th scope="col">SCHEDULE</th>
+            <th scope="col">STATUS</th>
+         
+        </thead>
+        <tbody class="details" *ngFor="let data of viewdata ; let indexOfelement=index;">
+
+          <td *ngIf="data.gamename == ' '">--</td>
+          <td *ngIf="data.gamename !== ' '">{{data?.gamename}}</td>
+          <td *ngIf="data.prize == ' '">--</td>
+          <td *ngIf="data.prize !== ' '">{{data?.prize}}</td>
+          <td *ngIf="data.date == ' '">--</td>
+          <td *ngIf="data.date !== ' '">{{data?.date}}</td>
+
+          <!-- <td>{{data?.prize}}</td>
+
+          <td>{{data?.date}}</td> -->
+      
+         <td class="set">Live</td>
+            
+        </tbody>
+        </table>
+  </div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<app-footer></app-footer>
+

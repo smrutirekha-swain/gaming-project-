@@ -1,0 +1,153 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="container-fluid">
+<div class="col-md-12" style="display: flex; justify-content: center; align-items: center;">
+  <div class="head">
+    <h1>Games</h1>
+  </div>
+
+</div>
+
+
+
+<main id="main" class="main" >
+
+  <div class="loaderDiv" *ngIf="isloading">
+    <!-- <img src="../../../assets/img/kyc.png"> -->
+
+    <span class="loader" id="loader"></span>
+</div>
+
+<!-- <span class="loader"></span> -->
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 1000px;">
+    ADD
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+<div class="modal-body" >
+    <form>
+
+        <div class="form-group">
+            <label for="game">GAME NAME</label>
+            <input type="text" class="form-control" [(ngModel)]="game" id="game" name="game" placeholder="Enter game name">
+        </div>
+
+        <div class="form-group">
+          <label for="image">IMAGE</label>
+          <input type="file" class="form-control" [(ngModel)]="image" id="image" name="image"
+           accept="image/png, image/jpeg, image/jpg" (change)="imageUpload($event)">
+      </div>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="gamesave()">Save changes</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- //update img -->
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Modal titleee</h5>
+      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+
+        <div class="form-group">
+            <label for="gamee">GAME NAME</label>
+            <input type="text" class="form-control" [(ngModel)]="gamee" id="gamee" name="gamee">
+        </div>
+
+        <div class="form-group">
+          <label for="imagee">IMAGE</label>
+          <input type="file" class="form-control" [(ngModel)]="imagee" id="imagee" name="imagee"
+           accept="image/png, image/jpeg, image/jpg" (change)="imageUpload($event)">
+      </div>
+
+    </form>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateimage()">
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<table class="table" style="
+width: 100%; border: 5px solid orangered; border-radius: 10px; background-color: whitesmoke;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">slno</th>
+        <th scope="col">GAME NAME</th>
+        <th scope="col">GAME IMAGE</th>
+        <th scope="col">ACTION</th>
+        </tr>
+        </thead>
+        <tbody class="details" *ngFor="let data of viewdata let indexOfelement=index;">
+          <tr>
+              <th>{{indexOfelement+1}}</th>
+              <td class="data">{{data.game_name}}</td>
+
+              <!-- <td>{{data.img}}</td> -->
+          
+              <td>
+                <div class="avatar-group">
+                  <img height="50px" width="50px"  src="{{url}}{{data?.img_path}}/{{data?.img}}" class="rounded-circle">
+                
+                </div>
+               
+              </td>
+              <td>
+
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                 (click)="updatedata(data)">
+                  EDIT
+                </button>
+               </div>
+               <div>
+                <button type="button" class='btn btn-danger' (click)="deleteedata(data?.id)">
+                 Delete
+                </button>
+              </div>  
+              </div>
+              </td>
+
+            </tr>
+        </tbody>
+        </table>
+</main>
+</div>
+<app-footer></app-footer>

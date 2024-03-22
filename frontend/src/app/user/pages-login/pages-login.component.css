@@ -1,0 +1,150 @@
+.bgImg{
+background-image: url(../../../assets/img/background.png);
+background-size: cover;
+}
+.transbox{
+    margin: 30px;
+    background-color: rgb(40, 36, 36);
+    opacity:0.6;
+}
+
+.btnSubmit:hover{
+    background-color:#DC631E;
+    color: #EFF2F4;
+    border-radius: 5px 5px 5px 5px;
+    height:40px;
+    width: 40;
+    /* border-color: #EFF2F4; */
+    /* box-shadow: #DC631E; */
+    /* box-shadow: px 2px 10px #0d1761; */
+    text-shadow: 2px 2px 2px #DC631E;
+    /* box-shadow: 0px 0px 55px #ff5e00; */
+    box-shadow: 0px 0px 14px 2px #ff5e00;
+
+    /* box-shadow: 0px 3px 15px currentcolor;
+    border: 5px solid currentcolor;
+    padding: 15px; */
+    /* font-family: 'Goldman';font-size: 52px; */
+    
+
+    -webkit-text-stroke-color: #DC631E;
+    /* -webkit-text-stroke-width: 1px; */
+    font-size: 30px;
+    font-weight: 800;
+
+    text-shadow: 0px 5px 20px #DC631E;
+    font-family: 'Goldman';
+
+}
+.btnSubmit{
+    background-color: black;
+    
+    padding-bottom: 45px;
+    color: #000000;
+    border-radius:5px 5px 5px 5px ;
+    transition: 1s;
+    background-size: 50px;
+    height:40px;
+    width: 50%;
+    border:#000000;
+    text-shadow: 0px 0px 45px #DC631E;
+    /* box-shadow: px 2px 10px #0d1761; */
+    box-shadow: 0px 0px 55px 6px #ff5e00;
+
+    
+    font-family: 'Goldman';font-size: 40px;
+
+    -webkit-text-stroke-color: #DC631E;
+    -webkit-text-stroke-width: 1px;
+    font-size: 30px;
+    font-weight: 100;
+
+    text-shadow: 32px 32px 40px #DC631E;
+    font-family: 'Goldman';
+
+}
+
+.usernameclo{
+border: 2px solid #DC631E;
+border-radius: 15px 15px 15px 15px;
+background-color: #000000;
+color: #EFF2F4;
+width: 85% !important;
+}
+
+.usernameclo P{
+    text-align: end;
+    width:95%;
+    /* padding-left: 32%;
+    padding-right: 32%; */
+}
+.input-group{
+
+    width:95%;
+}
+.passwordclo{
+
+    border: 2px solid #DC631E;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #000000; 
+}
+/* 
+.soo{
+    color: #000000;
+    
+} */
+
+/* .registerside{
+text-align: right;
+color: #EFF2F4;
+
+    font-size: 11px;
+    text-align: right;
+
+    font-size: 11px;
+    text-align: center;
+} */
+
+/* .forgetside{
+    text-align: right;
+    color: #EFF2F4;
+} */
+
+.loginclo{
+    -webkit-text-stroke-color: #DC631E;
+    -webkit-text-stroke-width: 1px;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 70px;
+    /* width: 50%!important; */
+
+    text-shadow: 0px 4px 5px #DC631E;
+    font-family: 'Goldman';
+    /* font-size: 56px; */
+    color: #000000;
+}
+.hideeye{
+    position: absolute;
+    margin-top: 13px;
+    right: 0;
+    padding-right: 35px;
+    color: #DC631E;
+    
+}
+.hideey{
+    position: absolute;
+    margin-top: 13px;
+    right: 0;
+    padding-right: 35px;
+    color: #DC631E;
+    
+}
+
+.backgroundlogin{
+
+    background: #000000;
+    border-radius: 5px;
+height:460px;
+padding: 20px;
+
+}

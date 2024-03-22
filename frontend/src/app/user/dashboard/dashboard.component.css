@@ -1,0 +1,85 @@
+.situ
+{
+    background-position: center;
+     /* position: fixed; */
+    background-size: 100%;
+     width: -webkit-fill-available;
+}
+.sub h2
+{
+    padding:2%; 
+   text-align: center;
+   font-size: 72px;
+  background: -webkit-linear-gradient(#f5bd04, #110f06c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: 800; 
+
+    
+    /* text-shadow: 2px 2px 71px #EC8B19; */
+}
+
+.main
+{
+    background-image: url(../../../assets/img/dashboard_front.jpg);
+    height: 100vh;    /* position: absolute; */
+    background-size: cover;
+    margin-left: 12rem;
+}
+#bar
+{
+   margin-top: 100px;
+    justify-content: center;
+    margin-left: 10px;
+}
+.sub1 h5
+{
+   font-size:20px;
+    color: rgba(139, 117, 16, 0.856);
+    
+    font-weight: 800; 
+    
+       
+}
+.sub2 h5{
+    font-size:20px;
+    background: -webkit-linear-gradient(#f5bd04, #110f06c4);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+     font-weight: 800; 
+     margin-bottom: 50px;
+    
+
+}
+.head
+{
+    margin-left: 38%;
+    margin-top: -2rem;
+    height: 50px;
+    width: 50px;
+   margin-bottom: 20%;
+
+}
+.card
+{
+    box-shadow:0 3px 10px rgba(240, 157, 3, 0.856);
+    /* box-shadow: 5px 8px #df9307; */
+}
+.card-body
+{
+    margin-bottom: 10%;
+    margin-top: -42px;
+}
+.card-body h6{
+    background-color: chocolate;
+}
+#bar1{
+    
+    margin-left: 10px;
+   
+}
+.pic1
+{
+    height: 120%;
+}

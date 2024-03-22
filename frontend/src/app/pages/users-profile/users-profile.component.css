@@ -1,0 +1,8 @@
+.main
+{
+    background-image: url(../../../assets/img/dashboard_front.jpg);
+    height: 62rem;
+    /* position: absolute; */
+    background-size: cover;
+    
+}

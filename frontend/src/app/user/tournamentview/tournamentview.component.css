@@ -1,0 +1,131 @@
+.main
+{
+    background-image: url(../../../assets/img/dashboard_front.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.userdash
+{
+    text-align: center;
+    /* color: rgba(139, 117, 16, 0.856); */
+    color:rgb(151, 100, 37);
+    padding-top: 2rem;
+
+}
+h1{
+    font-size: xxx-large;
+    font-family: fantasy;
+}
+.month
+{
+    text-align: center;
+    /* color: rgba(139, 117, 16, 0.856); */
+    color:rgb(151, 100, 37);
+
+}
+.month h3{
+    font-family: fantasy;
+    margin-top: 35px;
+}
+.tours
+{
+    /* color: rgba(139, 117, 16, 0.856); */
+    /* color:darkorange; */
+    color:rgb(151, 100, 37);
+
+    font-size: xx-large;
+}
+.tabledata
+{
+    margin: 100px 120px 0 100px;
+    
+}
+.details
+{
+    background-color: bisque;
+    font-family: fantasy;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.set
+{
+    justify-content: center;
+    text-align: center;
+}
+
+
+.sen{
+justify-content: flex-start;
+display:flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+align-items: center;
+padding-top: 4rem;
+text-shadow: 0px 0px 45px #b93131;
+
+}
+
+.fra{
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 7rem;
+    display: flex;
+
+}
+
+
+.fraaa{
+
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 4rem;
+    display: flex; 
+}
+
+.sdr{
+ background-color: #DC631E;
+    color: #f5f5f5;
+    border-radius: 5px 5px 5px 5px;
+    height: 40px;
+    width: 40;
+    text-shadow: 0px 0px 2px #DC631E;
+    box-shadow: 0px 0px 14px 2px #ff5e00;
+    -webkit-text-stroke-color: #DC631E;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: 0px 5px 20px #DC631E;
+    font-family: 'Goldman';
+    width: 297px;
+}
+
+
+
+
+
+ /* .btnSubmit{
+        background-color: black;
+    
+        color: #000000;
+        border-radius:5px 5px 5px 5px ;
+        transition: 1s;
+        background-size: 50px;
+        height:40px;
+        width: 50%;
+        border:#000000;
+        text-shadow: 0px 0px 45px #DC631E;
+   
+        box-shadow: 0px 0px 55px 6px #ff5e00;
+    
+        padding-bottom: 45px;
+        font-family: 'Goldman';font-size: 40px;
+        padding-bottom: 45px;
+        -webkit-text-stroke-color: #DC631E;
+        -webkit-text-stroke-width: 1px;
+        font-size: 30px;
+        font-weight: 800;
+    
+        text-shadow: 32px 32px 40px #DC631E;
+        font-family: 'Goldman';
+    
+    } */

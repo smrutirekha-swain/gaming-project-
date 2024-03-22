@@ -1,0 +1,143 @@
+.main
+{
+    height: 100vh;    /* position: absolute; */
+    background-size: cover;
+  padding-top: 4%;
+  /* background-color:antiquewhite */
+}
+.head h1
+{
+    color:rgb(151, 100, 37);
+    font-family: fantasy;
+    font-size: 800;
+}
+.details
+{
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+.thead-dark
+{
+    font-family: fantasy;
+    font-size: larger;
+}
+
+
+ .loaderDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    z-index: 99999999;
+}
+/*.loaderDiv img {
+    position: absolute;
+    width: 30px;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #0c9fb8;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    box-shadow: inset 0 0 10px 0px #0c9fb8;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #0065b4 transparent;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+  }
+
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: #5b0606;
+    box-shadow: 30px 0 0 #5b0606;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #180460;
+    box-shadow: 30px 0 0 #180460;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #180460;
+    }
+    50% {
+      box-shadow: 0 0 0 #5b0606;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #180460;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #5b0606;
+    }
+    50% {
+      box-shadow: 0 0 0 #5b0606;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #5b0606;
+      margin-top: 0;
+    }
+  }
+  .data
+  {
+    font-family: fantasy;
+    font-size: x-large;
+  }
+  

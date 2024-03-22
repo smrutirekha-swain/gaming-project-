@@ -1,0 +1,88 @@
+<main class="bgImg">
+   <div class="container">
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center ">
+
+         <!-- <div class="background">
+
+              <img src="assets/img/background.png">
+              <div class="transbox"></div>
+               -->
+
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                  <div class="card mb-3">
+                     <div class=" backgroundlogin">
+                        <div class="pt-4 pb-2 ">
+                           <h4 class="loginclo text-center  ">LOGIN</h4>
+                           <!-- <p class="text-center small">Enter your username & password to login</p> -->
+                        </div>
+                        <form class="row g-3">
+                           <div class="col-12 d-flex justify-content-center">
+
+                              <div class="input-group d-flex justify-content-center">
+                                 <input type="text" name="username" class="form-control usernameclo" id="yourUsername"
+                                    placeholder="USERNAME" [(ngModel)]="username" 
+                                    (keypress)="valid.onlyCharAndSpace($event)" required  >
+
+                              </div>
+
+                           </div>
+
+                           <!--  <div class="col-12 d-flex justify-content-center">
+                             
+                              <div class="input-group d-flex justify-content-center">
+                                  <input type="text"
+                                    name="username" class="form-control usernameclo" id="yourUsername" placeholder="USERNAME" >
+                             
+                        </div> 
+                     
+                           </div> -->
+
+                           <div class="col-12 d-flex justify-content-center ">
+                              <div class="input-group has-validation d-flex justify-content-center">
+
+                                 <input [type]="showPassword ?'text':'password'" name="password"
+                                    class="form-control passwordclo " style="color: #EFF2F4;" 
+                                           id="yourPassword"
+                                    placeholder="PASSWORD" [(ngModel)]="password">
+                                 <div>
+                                    <i (click)="taggleshow()" class="bx bx-show hideey" 
+                                     *ngIf="showPassword"></i>
+                                    <i (click)="taggleshow()" class='bx bx-hide hideeye' 
+                                     *ngIf="!showPassword"></i>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <p style="font-size: 12px;text-align: right;color: #EFF2F4; cursor:pointer ;"
+                                 (click)="forgetpassword()"><u>FORGET PASSWORD ?</u></p>
+                              <p style="font-size: 12px;text-align: center;color: #EFF2F4; cursor:pointer ;"
+                                 (click)="register()">DON'T HAVE AN ACCOUNT ?<u> REGISTER HERE</u></p>
+
+                           </div>
+
+                           <div class="col-12">
+                              <!-- <div class="form-check"> <input class="form-check-input" type="checkbox" name="remember"
+                                    value="true" id="rememberMe"> <label class="form-check-label"
+                                    for="rememberMe">Remember me</label></div> -->
+                           </div>
+                           <div class="col-12 d-flex justify-content-center"> <button class="btnSubmit" type="submit"
+                                 (click)="LogIn()">LOGIN</button></div>
+
+                        </form>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <p class="copyright-text d-flex justify-content-center" style="color: white; margin: 20px;">Copyright &copy;
+            2024 All Rights Reserved by
+            <a href="https://www.bisso.com/">Bisso</a>
+         </p>
+      </section>
+   </div>
+</main>

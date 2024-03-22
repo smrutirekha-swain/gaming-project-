@@ -1,0 +1,56 @@
+.main
+{
+   
+    height: 100vh;    /* position: absolute; */
+    background-size: cover;
+  padding-top: 4%;
+}
+.head h1
+{
+    color:rgb(151, 100, 37);
+    font-family: fantasy;
+    font-size: 800;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #5b0606;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid #180460;
+  border-left: 4px solid transparent;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loaderDiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 99999999;
+} 

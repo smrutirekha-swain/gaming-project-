@@ -1,0 +1,123 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="container-fluid">
+
+<div class="col-md-12" style="display: flex; justify-content: center; align-items: center;">
+  <div class="head">
+    <h1>Game Prize</h1>
+  </div>
+
+</div>
+
+
+<main id="main" class="main" >
+
+    <div class="loaderDiv" *ngIf="isloading">
+      <!-- <img src="../../../assets/img/kyc.png"> -->
+  
+      <span class="loader"></span>
+  </div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+  style="margin-left: 1000px;">
+  ADD
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Prize</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="game">Prize</label>
+            <input type="text" class="form-control" [(ngModel)]="prize" id="prize" name="prize"
+              placeholder="Enter prize">
+          </div>
+
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="prizetype()">Save
+          changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- update -->
+
+<div class="modal fade" id="b" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Prize</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="prizes">Game Prize</label>
+            <input type="text" class="form-control" [(ngModel)]="prizes" id="prizes" name="prizes"
+              placeholder="Enter mode type">
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="update()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<table class="table" *ngIf="viewtable" style="
+width: 100%; border: 5px solid orangered; border-radius: 10px; background-color: whitesmoke;">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">slno</th>
+      <th scope="col">Prize</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let data of viewdata ; let indexOfelement=index;">
+    <tr>
+
+      <th>{{indexOfelement+1}}</th>
+      <td class="data">{{data.prize_p}}</td>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <!-- <button type="button" class="btn btn-success" (click)="updatedata(data)" data-bs-toggle="modal" data-bs-target="#b"><i class='bx bx-pencil'></i>
+        </button> -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#b"
+          style="margin-left: 1000px;" (click)="updatedata(data)">
+          EDIT
+        </button>
+        <!-- <button type="button" class="btn btn-danger" (click)="delete()"><i class='bx bxs-trash'></i></button> -->
+      </div>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</main>
+</div>
+
+
+<app-footer></app-footer>
